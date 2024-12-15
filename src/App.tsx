@@ -1,3 +1,7 @@
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:923130587.
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:520726330.
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:3126151460.
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:3341195972.
 import { ErrorComponent, GitHubBanner, Refine } from "@refinedev/core";
 import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
@@ -8,9 +12,9 @@ import routerBindings, {
   UnsavedChangesNotifier,
 } from "@refinedev/react-router";
 import dataProvider from "@refinedev/simple-rest";
-import { BrowserRouter, Outlet, Route, Routes } from "react-router";
+import { BrowserRouter, Route, Routes } from "react-router";
 import "./App.css";
-import { Layout } from "./components/layout";
+import DashboardPage from "./app/dashboard/page";
 import {
   BlogPostCreate,
   BlogPostEdit,
@@ -23,6 +27,8 @@ import {
   CategoryList,
   CategoryShow,
 } from "./pages/categories";
+
+
 import { EditIcon, TagsIcon } from "lucide-react";
 
 function App() {
@@ -66,15 +72,9 @@ function App() {
             }}
           >
             <Routes>
-              <Route
-                element={
-                  <Layout>
-                    <Outlet />
-                  </Layout>
-                }
-              >
+              <Route element={<DashboardPage />}>
                 <Route
-                  index
+                  path="/"
                   element={<NavigateToResource resource="blog_posts" />}
                 />
                 <Route path="/blog-posts">
@@ -89,8 +89,9 @@ function App() {
                   <Route path="edit/:id" element={<CategoryEdit />} />
                   <Route path="show/:id" element={<CategoryShow />} />
                 </Route>
-                <Route path="*" element={<ErrorComponent />} />
-              </Route>
+                <Route path="*" element={<ErrorComponent />} />{" "}
+              </Route>{" "}
+              <Route path="*" element={<ErrorComponent />} />
             </Routes>
 
             <RefineKbar />
