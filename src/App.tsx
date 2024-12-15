@@ -1,8 +1,4 @@
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:923130587.
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:520726330.
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:3126151460.
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:3341195972.
-import { ErrorComponent, GitHubBanner, Refine } from "@refinedev/core";
+import { ErrorComponent,  Refine } from "@refinedev/core";
 import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 
@@ -34,7 +30,7 @@ import { EditIcon, TagsIcon } from "lucide-react";
 function App() {
   return (
     <BrowserRouter>
-      <GitHubBanner />
+     
       <RefineKbarProvider>
         <DevtoolsProvider>
           <Refine
