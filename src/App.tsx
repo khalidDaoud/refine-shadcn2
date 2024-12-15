@@ -34,6 +34,7 @@ function App() {
       <RefineKbarProvider>
         <DevtoolsProvider>
           <Refine
+            
             dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
             routerProvider={routerBindings}
             resources={[
