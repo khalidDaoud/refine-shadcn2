@@ -1,0 +1,28 @@
+/* RTL Support */
+[dir="rtl"] {
+    /* Reverse margins and paddings where needed */
+    .fixed.top-4.right-4 {
+        right: auto;
+        left: 1rem;
+    }
+
+    /* Reverse flexbox direction */
+    .flex {
+        flex-direction: row-reverse;
+    }
+
+    /* Keep some flex containers in original direction */
+    .flex.no-rtl {
+        flex-direction: row;
+    }
+
+    /* Adjust icons and buttons */
+    .lucide {
+        transform: scaleX(-1);
+    }
+
+    /* Don't flip these specific icons */
+    .lucide.no-rtl {
+        transform: none;
+    }
+}
