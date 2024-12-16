@@ -1,28 +1,24 @@
 import * as React from "react"
 import {
   AudioWaveform,
-  BookOpen,
-  Bot,
   Command,
-  Frame,
+  TruckIcon,
+  ListTodoIcon,
+  MapPinIcon,
   GalleryVerticalEnd,
-  Map,
-  PieChart,
-  Settings2,
-  TerminalSquare,
 } from "lucide-react"
 
-import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
-import { NavUser } from "@/components/nav-user"
-import { TeamSwitcher } from "@/components/team-switcher"
+import { NavMain } from "./nav-main"
+import { NavProjects } from "./nav-projects"
+import { NavUser } from "./nav-user"
+import { TeamSwitcher } from "./team-switcher"
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
-} from "@/components/ui/sidebar"
+} from "./ui/sidebar"
 
 // This is sample data.
 const data = {
@@ -50,107 +46,64 @@ const data = {
   ],
   navMain: [
     {
-      title: "Playground",
-      url: "#",
-      icon: TerminalSquare,
+      title: "Delivery Vehicles",
+      url: "/delivery-vehicles",
+      icon: TruckIcon,
       isActive: true,
       items: [
         {
-          title: "History",
-          url: "#",
+          title: "List",
+          url: "/delivery-vehicles",
         },
         {
-          title: "Starred",
-          url: "#",
-        },
-        {
-          title: "Settings",
-          url: "#",
-        },
+          title: "Create",
+          url: "/delivery-vehicles/create",
+        }
       ],
     },
     {
-      title: "Models",
-      url: "#",
-      icon: Bot,
+      title: "Tasks",
+      url: "/tasks",
+      icon: ListTodoIcon,
       items: [
         {
-          title: "Genesis",
-          url: "#",
+          title: "List",
+          url: "/tasks",
         },
         {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
+          title: "Create",
+          url: "/tasks/create",
+        }
       ],
     },
     {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
+      title: "Task Tracking",
+      url: "/tracking",
+      icon: MapPinIcon,
       items: [
         {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
+          title: "List",
+          url: "/tracking",
+        }
       ],
-    },
-    {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
-      ],
-    },
+    }
   ],
   projects: [
     {
-      name: "Design Engineering",
-      url: "#",
-      icon: Frame,
+      name: "Delivery Vehicles",
+      url: "/delivery-vehicles",
+      icon: TruckIcon,
     },
     {
-      name: "Sales & Marketing",
-      url: "#",
-      icon: PieChart,
+      name: "Tasks",
+      url: "/tasks",
+      icon: ListTodoIcon,
     },
     {
-      name: "Travel",
-      url: "#",
-      icon: Map,
-    },
+      name: "Task Tracking",
+      url: "/tracking",
+      icon: MapPinIcon,
+    }
   ],
 }
 

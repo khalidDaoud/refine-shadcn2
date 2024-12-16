@@ -1,0 +1,17 @@
+version: v2
+
+modules:
+  - path: proto
+  #- path: googleapis
+
+deps:
+  - buf.build/khaliddaoud/googelapis
+  - buf.build/bufbuild/protovalidate
+
+lint:
+  use:
+    - STANDARD
+
+breaking:
+  use:
+    - FILE
